@@ -1,0 +1,58 @@
+
+/* styling for the grid */
+grid-body {
+  grid-template-areas: "abtme abtme abtme pic" "banads colwks colwks colwks" "banads colwks colwks colwks" "banads colwks colwks colwks";
+}
+
+/* first row styling */
+grid-body about-me {
+  grid-area: abtme;
+  padding: 1em;
+  background-color: var(--green-main);
+}
+grid-body .aboutPic {
+  grid-area: pic;
+  max-width: 100%;
+  height: auto;
+}
+
+/* <><><> styling for rows 2-4 <><><> */
+
+/* side panel styling */
+grid-body aside {
+  grid-area: banads;
+  display: flex;
+  background-color: var(--blue-main);
+  padding: 1em;
+}
+/* grid-body aside:hover {
+  background-color: #7177C3;
+} */
+grid-body aside h1 {
+  writing-mode: vertical-lr;
+}
+grid-body aside p {
+  margin: .2em;
+}
+
+/* main article styling */
+grid-body article {
+  grid-area: colwks;
+  display: flex;
+  background-color: var(--orange-main);
+  padding: 1em;
+}
+grid-body article h1 {
+  writing-mode: vertical-rl;
+}
+grid-body article p {
+  margin: .2em;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 1em;
+}

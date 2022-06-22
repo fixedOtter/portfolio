@@ -1,3 +1,17 @@
+/******************/
+/*   variables /  */
+/* color scheming */
+/******************/
+:root {
+  --pink: hotpink;
+  --pink-hover: deeppink;
+  --green-main: #5BBD86;
+  --blue-main: #666CB8;
+  --orange-main: #FF977B;
+  --background: rgb(19, 19, 19);
+}
+
+
 /**************/
 /* resets lol */
 /**************/
@@ -29,14 +43,63 @@
 /****************/
 
 body {
-  background-color: rgb(19, 19, 19);
+  background-color: var(--background);
   height: 100%;
 }
 a {
   text-decoration: none;
-  color: hotpink;
+  color: var(--pink);
+}
+grid-body {
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr) ;
+  gap: .69em .69em;
 }
 flex-container {
   display: flex;
 }
 
+.topBar {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightpink;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vmin;
+}
+.topBar h1 {
+  font-size: 2rem;
+  color: var(--pink);
+  border-radius: .5vmin 2vmin;
+}
+/* .topBar nav {
+  background-color: lightblue;
+  border-radius: 2vmin .5vmin;
+} */
+.topBar nav a {
+  font-size: 1.8rem;
+  margin: 1rem;
+  font-weight: 420;
+}
+.topBar nav a:hover {
+  color: var(--pink-hover);
+}
+/* .topBar nav a:hover::after {
+  content: '';
+  position: relative;
+  height: .3rem;
+  width: 100%;
+  bottom: -1rem;
+  left: 0;
+  background-color: blueviolet;
+} */
+.topBar nav a:active {
+  background-color: lightgrey;
+  border-radius: 1em;
+  font-size: 1.7rem;
+}
+
+.logo {
+  width: 5vmin;
+  height: 5vmin;
+}
