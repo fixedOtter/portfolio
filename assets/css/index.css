@@ -1,52 +1,74 @@
 
 /* styling for the grid */
 grid-body {
-  grid-template-areas: "abtme abtme abtme pic" "banads colwks colwks colwks" "banads colwks colwks colwks" "banads colwks colwks colwks";
+  grid-template-areas: "about about about about pic" "banads colwks colwks colwks colwks" "banads colwks colwks colwks colwks" "banads colwks colwks colwks colwks" "contact contact contact contact contact";
 }
 
 /* first row styling */
 grid-body about-me {
-  grid-area: abtme;
+  grid-area: about;
   padding: 1em;
   background-color: var(--green-main);
 }
 grid-body .aboutPic {
   grid-area: pic;
-  max-width: 100%;
+  max-width: 20em;
   height: auto;
 }
 
 /* <><><> styling for rows 2-4 <><><> */
 
 /* side panel styling */
-grid-body aside {
+#banads {
   grid-area: banads;
   display: flex;
   background-color: var(--blue-main);
   padding: 1em;
+  
 }
-/* grid-body aside:hover {
+/* #banads:hover {
   background-color: #7177C3;
 } */
-grid-body aside h1 {
+#banads h1 {
   writing-mode: vertical-lr;
 }
-grid-body aside p {
+#banads p {
   margin: .2em;
 }
 
 /* main article styling */
-grid-body article {
+#coolwork {
   grid-area: colwks;
-  display: flex;
+  display: grid;
+  grid-template: 2em / 2em;
+  grid-template-areas: "blank description" "title content";
   background-color: var(--orange-main);
+  gap: .69em .69em;
   padding: 1em;
 }
-grid-body article h1 {
-  writing-mode: vertical-rl;
+#coolwork h1 {
+  writing-mode: vertical-lr;
+  grid-area: title;
 }
-grid-body article p {
+#coolwork p {
   margin: .2em;
+  grid-area: description;
+}
+#coolwork section {
+  grid-area: content;
+  display: flex;
+  justify-content: space-around;
+  max-width: fit-content;
+  flex-wrap: wrap;
+}
+#coolwork section a {
+  margin: .69em;
+}
+#coolwork section img:first-child {
+  max-width: 42em;
+}
+#coolwork section img {
+  max-width: 20em;
 }
 
 footer {

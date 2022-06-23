@@ -8,7 +8,9 @@
   --green-main: #5BBD86;
   --blue-main: #666CB8;
   --orange-main: #FF977B;
+  --white: #fff8e7;
   --background: rgb(19, 19, 19);
+  
 }
 
 
@@ -52,7 +54,7 @@ a {
 }
 grid-body {
   display: grid;
-  grid-template: repeat(5, 1fr) / repeat(4, 1fr) ;
+  grid-template: 20em repeat(5, 1fr) / repeat(5, 1fr);
   gap: .69em .69em;
 }
 flex-container {
