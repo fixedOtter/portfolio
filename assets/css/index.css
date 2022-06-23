@@ -1,7 +1,7 @@
 
 /* styling for the grid */
 grid-body {
-  grid-template-areas: "about about about about pic" "banads colwks colwks colwks colwks" "banads colwks colwks colwks colwks" "banads colwks colwks colwks colwks" "contact contact contact contact contact";
+  grid-template-areas: "about about about about pic" "banads colwks colwks colwks colwks" "banads colwks colwks colwks colwks" "banads colwks colwks colwks colwks" "banads colwks colwks colwks colwks" "contact contact contact contact contact";
 }
 
 /* first row styling */
@@ -24,11 +24,10 @@ grid-body .aboutPic {
   display: flex;
   background-color: var(--blue-main);
   padding: 1em;
-  
 }
-/* #banads:hover {
+#banads:hover {
   background-color: #7177C3;
-} */
+}
 #banads h1 {
   writing-mode: vertical-lr;
 }
@@ -57,24 +56,57 @@ grid-body .aboutPic {
 #coolwork section {
   grid-area: content;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   max-width: fit-content;
   flex-wrap: wrap;
 }
 #coolwork section a {
   margin: .69em;
 }
-#coolwork section img:first-child {
-  max-width: 42em;
-}
 #coolwork section img {
+  flex: 0 0 20%;
   max-width: 20em;
 }
+#coolwork section #bigger img {
+  flex: 1 0 100%;
+  max-width: 42em;
+  align-self: center;
+  justify-self: center;
+}
 
+/* styling for bottom contact row */
+contact-section {
+  grid-area: contact;
+  background-color: var(--yellow-main);
+  display: block;
+  text-align: center;
+}
+contact-section h2 {
+  color: var(--background);
+}
+contact-section p {
+  color: var(--background);
+}
+
+/* styling for copyleft footer */
 footer {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   padding: 1em;
+}
+
+/* media query styling for responsive design */
+@media (max-width: 905px) {
+  grid-body {
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    grid-template-areas: "about about about about" "colwks colwks colwks colwks" "colwks colwks colwks colwks" "colwks colwks colwks colwks" "contact contact contact contact";
+  }
+  #banads {
+    display: none;
+  }
+  grid-body .aboutPic {
+    display: none;
+  }
 }

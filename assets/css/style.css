@@ -8,9 +8,9 @@
   --green-main: #5BBD86;
   --blue-main: #666CB8;
   --orange-main: #FF977B;
+  --yellow-main: #FFDC7B;
   --white: #fff8e7;
   --background: rgb(19, 19, 19);
-  
 }
 
 
@@ -54,16 +54,19 @@ a {
 }
 grid-body {
   display: grid;
-  grid-template: 20em repeat(5, 1fr) / repeat(5, 1fr);
+  grid-template: repeat(4, 1fr) / repeat(5, 1fr);
   gap: .69em .69em;
 }
 flex-container {
   display: flex;
 }
 
+/* navigation bar styling */
+
 .topBar {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: .69em;
   background-color: lightpink;
   justify-content: space-between;
   align-items: center;
@@ -74,10 +77,6 @@ flex-container {
   color: var(--pink);
   border-radius: .5vmin 2vmin;
 }
-/* .topBar nav {
-  background-color: lightblue;
-  border-radius: 2vmin .5vmin;
-} */
 .topBar nav a {
   font-size: 1.8rem;
   margin: 1rem;
@@ -86,22 +85,23 @@ flex-container {
 .topBar nav a:hover {
   color: var(--pink-hover);
 }
-/* .topBar nav a:hover::after {
-  content: '';
-  position: relative;
-  height: .3rem;
-  width: 100%;
-  bottom: -1rem;
-  left: 0;
-  background-color: blueviolet;
-} */
 .topBar nav a:active {
   background-color: lightgrey;
   border-radius: 1em;
   font-size: 1.7rem;
 }
-
 .logo {
-  width: 5vmin;
-  height: 5vmin;
+  max-width: 5vmin;
+  max-height: 5vmin;
+}
+
+/* media query for the navigation bar */
+
+@media (max-width: 905px) {
+  .topBar nav {
+    display: none;
+  }
+  .topBar .logo {
+    display: none;
+  }
 }
