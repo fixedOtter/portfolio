@@ -28,8 +28,3 @@ When they resize the page or view the site on various screens and devices
 ## Project Mocked-up Wireframe
 
 ![Wireframe mock-up](assets/wireframe.png)
-
-## Actual Site Screenshot
-
-![Screenshot of site]()
-
